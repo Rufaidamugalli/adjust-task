@@ -13,9 +13,10 @@
  - **Using `vim`:**  open the text file with vim Enter :set numebr to disply line numbers 
 
  - **Using `wc`:**  
- ```bash```  
+ ```bash 
    wc -l file.txt 
      97 file.txt
+```     
  - **Using `awk`:** 
  ```bash 
       awk 'END {print NR}' file.txt 
@@ -55,8 +56,12 @@ sed -i '.bak' 's/Junior/Senior/g' file.txt
 ```
 ## Screenshots For Result: 
 ![Screenshot](./adjust-task/Screenshot1.png)
+
+
 ![Screenshot](./adjust-task/Screenshot2.png)
 
 ## Refrences : 
-[awk builtin varable ](https://stackoverflow.com/questions/39895734/awk-built-in-variable-nf "awk NF")
-[awk builtin variable](https://www.oreilly.com/library/view/effective-awk-programming/0596000707/ch04.html " awk tolower")
+[awk builtin varable NF ](https://stackoverflow.com/questions/39895734/awk-built-in-variable-nf "awk NF") 
+
+
+[awk builtin variable tolowe](https://www.oreilly.com/library/view/effective-awk-programming/0596000707/ch04.html " awk tolower")
