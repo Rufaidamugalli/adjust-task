@@ -16,7 +16,7 @@
  ```bash 
    wc -l file.txt 
 ```
-#### Result
+- Result
 ```bash
      97 file.txt
 ```     
@@ -24,7 +24,7 @@
  ```bash 
       awk 'END {print NR}' file.txt 
 ```
-#### Result
+- Result
 ```bash
       98
  ```      
@@ -33,7 +33,7 @@
  ```bash 
   grep -o 'Z' file.txt | wc -l 
 ```
-#### Result
+- Result
 ```bash
     44 
  ```
@@ -41,7 +41,7 @@
  ```bash 
  awk -F'Z' '{total += NF-1} END {print total}' file.txt
 ```
-#### Result
+- Result
 ```bash
  44
 ```
@@ -50,7 +50,7 @@
  ```bash 
  grep -inE 'Junior|Platform|Engineer' file.txt
 ```
-#### Result
+ - Result
 ```bash
 28:COJILxEOhBRPlatFormjc00OhTT6ve
 65:x7t2vMJunior0qcMHQtnVGhlggfnry
@@ -60,7 +60,7 @@
  ```bash 
  awk 'tolower($0) ~ /junior|platform|engineer/ {print NR ":" $0}' file.txt 
 ```
-#### Result
+- Result
 ```bash
  28:COJILxEOhBRPlatFormjc00OhTT6ve
 65:x7t2vMJunior0qcMHQtnVGhlggfnry
