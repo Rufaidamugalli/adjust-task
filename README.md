@@ -15,28 +15,43 @@
  - **Using `wc`:**  
  ```bash 
    wc -l file.txt 
+```
+####Result####
+```bash
      97 file.txt
 ```     
  - **Using `awk`:** 
  ```bash 
       awk 'END {print NR}' file.txt 
+```
+####Result####
+```bash
       98
  ```      
  ### 2 .Counting "Z" Characters in a File 
  - **Using `grep`: 
  ```bash 
   grep -o 'Z' file.txt | wc -l 
-    44 ``` 
+```
+####Result####
+```bash
+    44 
  ```
  - **Using `awk`:**
  ```bash 
  awk -F'Z' '{total += NF-1} END {print total}' file.txt
+```
+####Result####
+```bash
  44
 ```
 ### 3. Finding Specific Words on Lines
  - **Using `grep`:**  
  ```bash 
  grep -inE 'Junior|Platform|Engineer' file.txt
+```
+####Result####
+```bash
 28:COJILxEOhBRPlatFormjc00OhTT6ve
 65:x7t2vMJunior0qcMHQtnVGhlggfnry
 88:7B6nmS3lLJaEngineeR28pzseTejdm
@@ -44,6 +59,9 @@
  - **Using `awk`:** 
  ```bash 
  awk 'tolower($0) ~ /junior|platform|engineer/ {print NR ":" $0}' file.txt 
+```
+####Result####
+```bash
  28:COJILxEOhBRPlatFormjc00OhTT6ve
 65:x7t2vMJunior0qcMHQtnVGhlggfnry
 88:7B6nmS3lLJaEngineeR28pzseTejdm
@@ -55,10 +73,10 @@ This command modifies the file and save a backup with .back extension
 sed -i '.bak' 's/Junior/Senior/g' file.txt 
 ```
 ## Screenshots For Result: 
-![Screenshot](./adjust-task/Screenshot1.png)
+![Screenshot](./Screenshot1.png)
 
 
-![Screenshot](./adjust-task/Screenshot2.png)
+![Screenshot](./Screenshot2.png)
 
 ## Refrences : 
 [awk builtin varable NF ](https://stackoverflow.com/questions/39895734/awk-built-in-variable-nf "awk NF") 
